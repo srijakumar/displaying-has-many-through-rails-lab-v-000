@@ -5,9 +5,11 @@ class PatientsController < ApplicationController
 
   def new
     @patient = Patient.new
+      redirect_to patient
   end
 
   def show
     @patient = Patient.find(params[:id])
+    redirect_to patient
   end
 end
